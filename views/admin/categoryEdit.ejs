@@ -1,0 +1,24 @@
+<%- include('header') %>
+<div class="recent-grid-update">
+    <div class="card">
+      <div class="card-header">
+          <h1>Sửa loại sản phẩm</h1>
+      </div>
+      <form action="/admin/category/update" method="post">
+        <div class="card-body">
+            <input name="nameCategory" type="text" value="<%= item.tenLoai %> " placeholder="Nhập tên loại">
+            <input name="rateCategory" type="text" value="<%= item.thuTu %> " placeholder="Nhập thứ tự">
+          </div>
+          <div class="card-body">
+            <label for="">Ẩn hiện</label>
+            <input type="radio" name="status" value="1" <%= item.anHien == 1 ? "checked" : "" %> > Hiện
+            <input type="radio" name="status" value="0" <%= item.anHien == 0 ? "checked" : "" %> > Ẩn              
+        </div>
+        <div class="card-body">
+          <input name="idCategory" type="hidden" value="<%= item.id %> " placeholder="Nhập thứ tự">
+          <button type="submit" class="btnAdd">Lưu</button>
+        </div>
+      </form>
+  </div>
+</div>
+<%- include('footer') %> 

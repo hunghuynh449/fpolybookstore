@@ -1,0 +1,40 @@
+<%- include('header') %>
+<div class="container">
+    <h1 class="heading"> Thêm <span>sách</span></h1>
+    <form class="row g-3 needs-validation" action="/admin/products/addnew" method="POST" enctype="multipart/form-data">
+        <div class="col-md-6">
+            <label for="validationCustom01" class="form-label">Tên sách</label>
+            <input type="text" class="form-control" name="nameBook" id="validationCustom01" value="">
+        </div>
+        <div class="col-md-6">
+            <label for="validationCustom02" class="form-label">Giá sách</label>
+            <input type="text" class="form-control" name="priceBook" id="validationCustom02" value="">
+        </div>
+        <div class="col-md-6">
+            <label for="validationCustom04" class="form-label">Hình sách</label>
+            <input type="file" name="imgBook" class="form-control" id="validationCustom04">
+        </div>
+        <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">Loại sách</label>
+            <select class="form-control" name="idCate">
+                <option value="0" disabled selected>Chọn loại sách</option>
+                <% for (let cate of item) { %> 
+                    <option value="<%= cate.id %>"><%= cate.tenLoai %></option>
+                <% } %> 
+            </select>
+        </div>
+        <div class="col-md-12">
+            <label  class="form-label">Ẩn hiện</label>
+            <input style="margin-left: 1rem;" type="radio" name="status" value="1" checked> Hiện
+            <input style="margin-left: 1rem;" type="radio" name="status" value="0"> Ẩn              
+        </div>
+        <div class="col-md-12">
+            <label for="validationCustom05" class="form-label">Mô tả</label>
+            <textarea class="form-control" name="detailBook" id="validationCustom03"></textarea>
+        </div>
+        <div class="col-12">
+            <button class="btn" type="submit">Thêm sản phẩm</button>
+        </div>
+    </form>
+</div>
+<%- include('footer') %> 

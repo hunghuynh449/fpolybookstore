@@ -1,0 +1,166 @@
+.recent-grid{
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 70% auto;
+    padding: 0 7%;
+    padding-top: 11rem;
+}
+
+.recent-grid-update{
+    margin: 4rem auto;
+    padding: 0 7%;
+    padding-top: 11rem;
+    max-width: 60vw;
+}
+
+.recent-grid-full{
+    margin: 4rem auto;
+    padding: 0 7%;
+    padding-top: 11rem;
+    width: 100%;
+}
+
+.dashboard-container{
+    width: 80vw;
+    margin: 4rem auto;
+    padding: 0 7%;
+    padding-top: 11rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-container .dashboard-text {
+    flex: 1 1 30rem;
+}
+
+.dashboard-container .dashboard-text h1{
+    font-size: 5rem;
+    line-height: 3rem;
+    color: red;
+}
+
+.dashboard-container .dashboard-text h2{
+    font-size: 3rem;
+}
+
+.dashboard-container .dashboard-img{
+    flex: 1 1 27rem;
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard-container .dashboard-img img{
+    width: 100%;
+}
+
+.card{
+    background: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.card-header,
+.card-body{
+    padding: 1rem;
+    font-size: 2rem;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card-body button{
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.card-body button a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.card-body .btnEdit{
+    background: rgb(253, 138, 6);
+}
+
+.card-body .btnDelete{
+    background: var(--red);
+}
+
+.card-body .btnAdd{
+    margin-left: 0.7rem;
+    width: 30%;
+    background: rgb(0, 189, 47);
+}
+
+.card-body table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.card-body input[type="text"]{
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+    border: none;
+    outline: none;
+}
+
+.card-body label{
+    padding-left: 0.5rem;
+}
+
+.card-body input[type="text"]~input[type="text"]{
+    margin-top: 1rem;
+}
+
+.card-body input[type="radio"]{
+    margin-left: 1rem;
+}
+
+thead tr{
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+tbody tr{
+    transition: ease-in;
+}
+
+#listProducts tr td img{
+    width: 45px;
+    height: 55px;
+}
+
+tbody tr:hover{
+    background: rgb(233, 233, 233);
+}
+
+thead td{
+    font-weight: 700;
+}
+
+td{
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    color: #222;
+}
+
+textarea.form-control {
+    height: 400px;
+}

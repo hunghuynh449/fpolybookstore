@@ -1,0 +1,42 @@
+<%- include('header') %> 
+<div class="recent-grid-full">
+  <div class="category">
+    <div class="card">
+        <div class="card-header">
+            <h1>Sản phẩm</h1>
+        </div>
+        <div class="card-body">
+            <table>
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Tên sách</td>
+                        <td>Hình ảnh</td>
+                        <td>Giá</td>
+                        <td>ID Loại</td>
+                        <td>Ẩn hiện</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody id="listProducts">
+                  <% for (let book of data) { %>
+                    <tr>
+                        <td><%= book.id %></td>
+                        <td><%= book.tenSach %></td>
+                        <td><img src="/<%= book.urlHinh %>" alt=""></td>
+                        <td><%= book.gia %></td>
+                        <td><%= book.idLoai %></td>
+                        <td><%= book.anHien == 1 ? "Đang hiện" : "Đang ẩn" %></td>
+                        <td>
+                            <button class="btnEdit"><a href="/admin/products/edit/<%= book.id %>">Sửa</a></button>
+                            <button class="btnDelete"><a href="/admin/products/delete/<%= book.id %>">Xóa</a></button>
+                        </td>
+                    </tr>
+                  <% } %> 
+                </tbody>
+            </table>
+        </div>
+    </div>
+  </div>
+</div>
+<%- include('footer') %> 

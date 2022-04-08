@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> </title>
+    <link rel="icon" sizes="200x200" href="images/webLogo.png">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- css file link -->
+    <link rel="stylesheet" href="stylesheets/login.css">
+
+    <!-- ionicon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="loading-box">
+        <div class="container-loading">
+            <div class="dashed-loading"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <img src="/images/dangky.png" alt="">
+        </div>
+        <div class="box-left">
+            <div class="box-header">
+                <div class="box-icon">
+                    <i class="far fa-user"></i>
+                </div>
+            </div>
+            <h1>Đăng ký</h1>
+            <form action="/signup/handle" method="post">
+
+                <div class="row mb10 ">
+                    <input id="email" autocomplete="off" type="email" placeholder="Email" name="email_account">
+                    <p></p>
+                </div>
+                <div class="row mb10 ">
+                    <input id="username" autocomplete="off" type="text" placeholder="Họ tên" name="name_account">
+                    <p></p>
+                </div>
+                <div class="row mb10 ">
+                    <input id="pass" autocomplete="off" type="password" placeholder="Mật Khẩu" name="pass_account">
+                    <p></p>
+                </div>
+                <div class="row mb10 ">
+                    <input id="repass" autocomplete="off" type="password" placeholder="Nhập lại mật khẩu">
+                    <p></p>
+                </div>
+                <div class="row mb10 mb3">
+                    <a href="#" class="button facebook">
+                        <span class="button-icon">
+                            <i class="fab fa-facebook-square"></i>
+                        </span>
+                        <span>
+                            Facebook
+                        </span>
+                    </a>
+                    <a href="#" class="button mail ">
+                        <span class="button-icon">
+                            <i class="fab fa-google-plus"></i>
+                        </span>
+                        <span>
+                            Gmail
+                        </span>
+                    </a>
+                    <a href="#" class="button iclou">
+                        <span class="button-icon">
+                            <i class="fab fa-apple"></i>
+                        </span>
+                        <span>
+                            Icloud
+                        </span>
+                    </a>
+                </div>
+                <div class="row mb10 mb3">
+                    <input type="submit" value="Đăng ký" name="register">
+                </div>
+                <div class="row mb10 mb3">
+                    <a href="/forgotpass" class="form"> Quên mật khẩu?</a><br>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
